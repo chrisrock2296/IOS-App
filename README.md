@@ -2,7 +2,8 @@
 class
 
 
-        //prints pop up message use this code
+//prints pop up message use this code:
+        
         let alertController = UIAlertController(title: "You Must be Rich", message: "Hello there", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
@@ -11,7 +12,8 @@ class
 
 
 
-       // Useing tip with diffrent settings  
+// Useing tip with diffrent settings:
+       
         let userInput = Float(TxtBillAmount.text!)
         let index : Int = DifTipAmout.selectedSegmentIndex
         var TipRate : Float
@@ -31,4 +33,9 @@ class
         LblTipamount.text = dispay
         }
 
+//this click away anaything on screen:
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
         
