@@ -11,4 +11,24 @@ class
 
 
 
+       // Useing tip with diffrent settings  
+        let userInput = Float(TxtBillAmount.text!)
+        let index : Int = DifTipAmout.selectedSegmentIndex
+        var TipRate : Float
+        if index == 0 {
+            TipRate = 0.15
+        }
+        else if index == 1 {
+            TipRate = 0.20
+        }
+        else {
+            TipRate = 0.25
+        }
+        let Tip = userInput! * TipRate
+        
+        let dispay = String(format:"$%.2f",Tip)
+        
+        LblTipamount.text = dispay
+        }
+
         
